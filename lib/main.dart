@@ -44,14 +44,13 @@ class _WebViewAppState extends State<WebViewApp> {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        WebViewWidget(controller: controller),
-        if (loadingPercentage < 100)
-          LinearProgressIndicator(
-            value: loadingPercentage / 100.0,
-          )
-      ],
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Flutter WebView'),
+      ),
+      body: WebViewWidget(
+        controller: controller,
+      ),
     );
   }
 }
