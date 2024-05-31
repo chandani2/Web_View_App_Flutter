@@ -37,8 +37,9 @@ class _WebViewAppState extends State<WebViewApp> {
           });
         },
       ))
+      ..setJavaScriptMode(JavaScriptMode.unrestricted)
       ..loadRequest(
-        Uri.parse('https://flutter.dev'),
+        Uri.parse('https://www.youtube.com/@chandanithequeens'),
       );
   }
 
